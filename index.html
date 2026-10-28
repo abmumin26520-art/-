@@ -1,0 +1,223 @@
+HTML
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>আমার অনলাইন শপ - সেরা কেনাকাটা</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        nav ul li a:hover {
+            color: #e74c3c;
+        }
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            height: 400px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        .btn {
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background-color: #c0392b;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2rem;
+            color: #2c3e50;
+        }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: 0.3s;
+            text-align: center;
+            padding-bottom: 15px;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+        }
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .product-card h3 {
+            margin: 15px 0 10px;
+            font-size: 1.2rem;
+        }
+        .product-card .price {
+            color: #e74c3c;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">বিলাল শপ.কম</div>
+        <nav>
+            <ul>
+                <li><a href="#">হোম</a></li>
+                <li><a href="#products">পণ্যসমূহ</a></li>
+                <li><a href="#about">আমাদের সম্পর্কে</a></li>
+                <li><a href="#contact">যোগাযোগ</a></li>
+  
+<a href="https://wa.me/8801718603647?text=হ্যালো,%20আমি%20আপনার%20ওয়েবসাইট%20থেকে%20পণ্য%20অর্ডার%20করতে%20চাই।" target="_blank" style="color: #22c55e; font-weight: bold;">WhatsApp এ যোগাযোগ করুন</a>
+<!-- অর্ডার বা কন্টাক্ট ফর্ম সেকশন -->
+<div class="container" id="contact" style="background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <h2 class="section-title">পণ্য অর্ডার করতে ফর্মটি পূরণ করুন</h2>
+    <form action="#" method="POST" style="display: flex; flex-direction: column; gap: 15px; max-width: 500px; margin: 0 auto;">
+        <div>
+            <label style="display: block; margin-bottom: 5px; font-weight: bold;">আপনার নাম:</label>
+            <input type="text" placeholder="আপনার নাম লিখুন" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+        </div>
+        <div>
+            <label style="display: block; margin-bottom: 5px; font-weight: bold;">মোবাইল নম্বর:</label>
+            <input type="tel" placeholder="আপনার মোবাইল নম্বর" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+        </div>
+        <div>
+            <label style="display: block; margin-bottom: 5px; font-weight: bold;">ডেলিভারির ঠিকানা:</label>
+            <textarea placeholder="পূর্ণ ঠিকানা লিখুন" rows="3" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"></textarea>
+        </div>
+        <button type="submit" class="btn" style="cursor: pointer;">অর্ডার কনফার্ম করুন</button>
+    </form>
+</div>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>অনলাইনে আপনার পছন্দের পণ্য কিনুন</h1>
+        <p>সের a মানের পণ্য সাশ্রয়ী মূল্যে ঘরে বসেই অর্ডার করুন</p>
+        <a href="#products" class="btn">কেনাকাটা শুরু করুন</a>
+    </section>
+
+    <div class="container" id="products">
+        <h2 class="section-title">জনপ্রিয় পণ্যসমূহ</h2>
+        <div class="products-grid">
+            
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=500&q=80" alt="স্মার্ট ওয়াচ">
+                <h3>স্টাইলিশ স্মার্ট ওয়াচ</h3>
+                <div class="price">১,৫০০ টাকা</div>
+                <button class="btn" onclick="addToCart('স্টাইলিশ স্মার্ট ওয়াচ')">অর্ডার করুন</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=500&q=80" alt="হেডফোন">
+                <h3>ওয়ারলেস হেডফোন</h3>
+                <div class="price">২,২০০ টাকা</div>
+                <button class="btn" onclick="addToCart('ওয়ারলেস হেডফোন')">অর্ডার করুন</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=500&q=80" alt="কেডস">
+                <h3>স্পোর্টস কেডস</h3>
+                <div class="price">৩,৫০০ টাকা</div>
+                <button class="btn" onclick="addToCart('স্পোর্টস কেডস')">অর্ডার করুন</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=500&q=80" alt="গেমিং মাউস">
+                <h3> RGB গেমিং মাউস</h3>
+                <div class="price">৮০০ টাকা</div>
+                <button class="btn" onclick="addToCart('RGB গেমিং মাউস')">অর্ডার করুন</button>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; ২০২৬ আমারশপ.কম। সর্বস্বত্ব সংরক্ষিত।</p>
+    </footer>
+
+    <script>
+        function addToCart(productName) {
+            alert(productName + ' কার্টে যোগ করা হয়েছে! অর্ডার কনফার্ম করতে আমাদের সাথে যোগাযোগ করুন।');
+        }
+    </script>
+
+</body>
+</html>
